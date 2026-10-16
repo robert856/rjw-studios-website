@@ -252,11 +252,14 @@
 
   /* About */
   #about{ background: var(--bg-alt); }
-  .about-grid{ display:grid; grid-template-columns: .9fr 1.1fr; gap:64px; align-items:start; }
-  .about-grid .ph-photo{ aspect-ratio: 3/4; }
+  .about-grid{ display:grid; grid-template-columns: 280px minmax(0, 1fr); gap:64px; align-items:start; }
+  .about-grid .ph-photo{ aspect-ratio: 3/4; width:100%; max-width:280px; }
   .about-grid .copy p + p{ margin-top:16px; }
   .about-grid .copy p{ color: var(--ink-soft); font-size:15px; line-height:1.85; }
-  @media (max-width: 880px){ .about-grid{ grid-template-columns:1fr; } }
+  @media (max-width: 880px){
+    .about-grid{ grid-template-columns:1fr; }
+    .about-grid .ph-photo{ max-width:240px; }
+  }
 
   /* Contact */
   .contact-grid{ display:grid; grid-template-columns: .8fr 1.2fr; gap: 72px; }
