@@ -419,7 +419,7 @@
           <div class="meta"><h4 data-editable="text">Walnut Credenza</h4><span class="tag" data-editable="text">Furniture</span></div>
         </div>
         <div class="g-card">
-          <div class="ph-photo has-photo" data-editable="image"><video autoplay="" loop="" playsinline="" src="assets/media-07.mp4"></video><div class="ph-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="14" rx="1"></rect><circle cx="9" cy="10" r="1.5"></circle><path d="M21 16l-5.5-5-4 4-2-2L3 18"></path></svg><span>Add photo</span></div></div>
+          <div class="ph-photo has-photo" data-editable="image"><video autoplay="" muted="" loop="" playsinline="" src="assets/media-07.mp4"></video><div class="ph-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="14" rx="1"></rect><circle cx="9" cy="10" r="1.5"></circle><path d="M21 16l-5.5-5-4 4-2-2L3 18"></path></svg><span>Add photo</span></div></div>
           <div class="meta"><h4 data-editable="text">Entry Hall Millwork</h4><span class="tag" data-editable="text">Millwork</span></div>
         </div>
       </div>
@@ -465,7 +465,7 @@
   <section id="millwork" class="section-pad" style="background:var(--panel); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
     <div class="wrap">
       <div class="feature-row">
-        <div class="ph-photo has-photo" data-editable="image"><video autoplay="" loop="" playsinline="" src="assets/media-10.mp4"></video><div class="ph-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="14" rx="1"></rect><circle cx="9" cy="10" r="1.5"></circle><path d="M21 16l-5.5-5-4 4-2-2L3 18"></path></svg><span>Add photo</span></div></div>
+        <div class="ph-photo has-photo" data-editable="image"><video autoplay="" muted="" loop="" playsinline="" src="assets/media-10.mp4"></video><div class="ph-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="14" rx="1"></rect><circle cx="9" cy="10" r="1.5"></circle><path d="M21 16l-5.5-5-4 4-2-2L3 18"></path></svg><span>Add photo</span></div></div>
         <div class="copy">
           <span class="eyebrow" data-editable="text">Architectural Millwork</span>
           <h2 data-editable="text">Architecture, finished in detail</h2>
@@ -626,7 +626,7 @@
           var media;
           if (file.type.indexOf('video/') === 0){
             media = document.createElement('video');
-            media.autoplay = true; media.muted = true; media.loop = true; media.playsInline = true;
+            media.autoplay = true; media.muted = true; media.defaultMuted = true; media.loop = true; media.playsInline = true;
             media.src = reader.result;
           } else {
             media = document.createElement('img');
