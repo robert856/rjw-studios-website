@@ -134,14 +134,6 @@
     position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:1;
   }
   .ph-photo.has-photo .ph-inner{ display:none; }
-  [data-editable="image"]{ cursor: default; }
-  body.rjw-editing [data-editable="image"]{ cursor: pointer; }
-  body.rjw-editing [data-editable="image"]:hover::after{
-    content:"Click to replace photo / video"; position:absolute; inset:auto 0 0 0; z-index:3;
-    background: rgba(38,32,26,.78); color:#fff;
-    font-size:11px; letter-spacing:.1em; text-transform:uppercase; text-align:center; padding:8px;
-  }
-
   /* ---------- Hero ---------- */
   .hero{
     position:relative; height:100svh; min-height:560px; overflow:hidden;
@@ -289,32 +281,6 @@
   .foot-links a:hover{ color:var(--accent); }
   .copyright{ font-size:11.5px; color: var(--ink-soft); }
 
-  [data-editable="text"]{ outline-offset:4px; border-radius:2px; }
-  body.rjw-editing [data-editable="text"]{
-    outline: 1px dashed rgba(147,112,63,.55);
-    cursor:text;
-  }
-  body.rjw-editing [data-editable="text"]:focus{
-    outline: 1px solid var(--accent); background: rgba(147,112,63,.08);
-  }
-
-  /* Admin toolbar */
-  #rjw-toolbar{
-    position:fixed; left:50%; bottom: 22px;
-    transform:translateX(-50%); z-index:200;
-    background: var(--ink); color: var(--bg);
-    border-radius:999px; padding:10px 10px 10px 22px;
-    display:flex; align-items:center; gap:16px; box-shadow: 0 12px 30px rgba(0,0,0,.28);
-    font-size:12px; letter-spacing:.06em;
-  }
-  #rjw-toolbar[hidden]{ display:none; }
-  #rjw-toolbar b{ font-weight:500; }
-  #rjw-toolbar .rjw-btn{
-    border:1px solid rgba(247,242,231,.35); background:transparent; color:var(--bg);
-    border-radius:999px; padding:9px 18px; font-size:11.5px; letter-spacing:.12em; text-transform:uppercase;
-    cursor:pointer; font-family:'Jost',sans-serif;
-  }
-  #rjw-toolbar .rjw-btn.primary{ background: var(--accent); border-color:var(--accent); color:#1B1712; }
   #rjw-toast{
     position:fixed; left:50%; bottom: 92px; transform:translateX(-50%) translateY(10px);
     background: var(--ink); color:var(--bg); padding:10px 20px; border-radius:8px; font-size:12.5px;
@@ -335,8 +301,8 @@
 <header class="site scrolled">
   <div class="wrap nav-row">
     <a href="#top" class="wordmark">
-      <span class="name" data-editable="text">RJW STUDIOS</span>
-      <span class="tag" data-editable="text">CUSTOM DESIGN · CRAFTED LIVING</span>
+      <span class="name">RJW STUDIOS</span>
+      <span class="tag">CUSTOM DESIGN · CRAFTED LIVING</span>
     </a>
     <nav class="links" id="rjw-nav">
       <a href="#work">Work</a>
@@ -352,20 +318,20 @@
 
 <main id="top">
   <section class="hero">
-    <div class="hero-media ph-photo has-photo" data-editable="image" id="hero-visual">
+    <div class="hero-media ph-photo has-photo" id="hero-visual">
       <video autoplay="" muted="" loop="" playsinline="" preload="auto" src="assets/media-01.mp4"></video>
       <div class="ph-inner">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="14" rx="1"></rect><circle cx="9" cy="10" r="1.5"></circle><path d="M21 16l-5.5-5-4 4-2-2L3 18"></path></svg>
-        <span>Hero photo or video · press Shift+E to add yours</span>
+        <span>RJW Studios</span>
       </div>
     </div>
     <div class="hero-scrim" aria-hidden="true"></div>
     <div class="hero-copy">
-      <span class="eyebrow" data-editable="text">Custom Cabinetry · Furniture · Millwork</span>
-      <h1 data-editable="text">Bespoke design, <em>built by hand.</em></h1>
-      <p class="sub" data-editable="text">Custom cabinetry, furniture, and architectural millwork designed and fabricated for exceptional interiors — from a studio built on 26 years of hands‑on craft.</p>
+      <span class="eyebrow">Custom Cabinetry · Furniture · Millwork</span>
+      <h1>Bespoke design, <em>built by hand.</em></h1>
+      <p class="sub">Custom cabinetry, furniture, and architectural millwork designed and fabricated for exceptional interiors — from a studio built on 26 years of hands‑on craft.</p>
       <a class="btn solid" href="#work">
-        <span data-editable="text">Explore Our Work</span>
+        <span>Explore Our Work</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12h15M13 6l6 6-6 6"></path></svg>
       </a>
     </div>
@@ -375,56 +341,56 @@
   </section>
   <section class="strip wrap" style="max-width:100%; padding-inline:0;">
     <div>
-      <span class="num" data-editable="text">01</span>
+      <span class="num">01</span>
       <span class="rule"></span>
-      <h3 data-editable="text">Custom Cabinetry</h3>
-      <p data-editable="text">Kitchens and baths, finished to the smallest detail.</p>
+      <h3>Custom Cabinetry</h3>
+      <p>Kitchens and baths, finished to the smallest detail.</p>
     </div>
     <div>
-      <span class="num" data-editable="text">02</span>
+      <span class="num">02</span>
       <span class="rule"></span>
-      <h3 data-editable="text">Furniture</h3>
-      <p data-editable="text">Heirloom pieces designed and built for real life.</p>
+      <h3>Furniture</h3>
+      <p>Heirloom pieces designed and built for real life.</p>
     </div>
     <div>
-      <span class="num" data-editable="text">03</span>
+      <span class="num">03</span>
       <span class="rule"></span>
-      <h3 data-editable="text">Millwork</h3>
-      <p data-editable="text">Architectural detail with the precision of fine furniture.</p>
+      <h3>Millwork</h3>
+      <p>Architectural detail with the precision of fine furniture.</p>
     </div>
   </section>
 
   <section id="work" class="section-pad">
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow" data-editable="text">Selected Work</span>
-        <h2 data-editable="text">A portfolio built by hand</h2>
-        <p data-editable="text">A sampling of recent kitchens, furniture commissions, and millwork — each one designed, engineered, and finished under one roof.</p>
+        <span class="eyebrow">Selected Work</span>
+        <h2>A portfolio built by hand</h2>
+        <p>A sampling of recent kitchens, furniture commissions, and millwork — each one designed, engineered, and finished under one roof.</p>
       </div>
       <div class="gallery">
         <div class="g-card">
-          <div class="ph-photo has-photo" data-editable="image"><img src="assets/media-02.png" alt=""><div class="ph-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="14" rx="1"></rect><circle cx="9" cy="10" r="1.5"></circle><path d="M21 16l-5.5-5-4 4-2-2L3 18"></path></svg><span>Add photo</span></div></div>
-          <div class="meta"><h4 data-editable="text">Prism Bookcase</h4><span class="tag" data-editable="text">Furniture</span></div>
+          <div class="ph-photo has-photo"><img src="assets/media-02.png" alt=""><div class="ph-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="14" rx="1"></rect><circle cx="9" cy="10" r="1.5"></circle><path d="M21 16l-5.5-5-4 4-2-2L3 18"></path></svg><span>Add photo</span></div></div>
+          <div class="meta"><h4>Prism Bookcase</h4><span class="tag">Furniture</span></div>
         </div>
         <div class="g-card">
-          <div class="ph-photo has-photo" data-editable="image"><img src="assets/media-03.png" alt=""><div class="ph-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="14" rx="1"></rect><circle cx="9" cy="10" r="1.5"></circle><path d="M21 16l-5.5-5-4 4-2-2L3 18"></path></svg><span>Add photo</span></div></div>
-          <div class="meta"><h4 data-editable="text">Montclair Bookcase</h4><span class="tag" data-editable="text">Furniture</span></div>
+          <div class="ph-photo has-photo"><img src="assets/media-03.png" alt=""><div class="ph-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="14" rx="1"></rect><circle cx="9" cy="10" r="1.5"></circle><path d="M21 16l-5.5-5-4 4-2-2L3 18"></path></svg><span>Add photo</span></div></div>
+          <div class="meta"><h4>Montclair Bookcase</h4><span class="tag">Furniture</span></div>
         </div>
         <div class="g-card">
-          <div class="ph-photo has-photo" data-editable="image"><img src="assets/media-04.png" alt=""><div class="ph-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="14" rx="1"></rect><circle cx="9" cy="10" r="1.5"></circle><path d="M21 16l-5.5-5-4 4-2-2L3 18"></path></svg><span>Add photo</span></div></div>
-          <div class="meta"><h4 data-editable="text">Library Built-Ins</h4><span class="tag" data-editable="text">Millwork</span></div>
+          <div class="ph-photo has-photo"><img src="assets/media-04.png" alt=""><div class="ph-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="14" rx="1"></rect><circle cx="9" cy="10" r="1.5"></circle><path d="M21 16l-5.5-5-4 4-2-2L3 18"></path></svg><span>Add photo</span></div></div>
+          <div class="meta"><h4>Library Built-Ins</h4><span class="tag">Millwork</span></div>
         </div>
         <div class="g-card">
-          <div class="ph-photo has-photo" data-editable="image"><img src="assets/media-05.png" alt=""><div class="ph-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="14" rx="1"></rect><circle cx="9" cy="10" r="1.5"></circle><path d="M21 16l-5.5-5-4 4-2-2L3 18"></path></svg><span>Add photo</span></div></div>
-          <div class="meta"><h4 data-editable="text">Montrose Armoire</h4><span class="tag" data-editable="text">Cabinetry</span></div>
+          <div class="ph-photo has-photo"><img src="assets/media-05.png" alt=""><div class="ph-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="14" rx="1"></rect><circle cx="9" cy="10" r="1.5"></circle><path d="M21 16l-5.5-5-4 4-2-2L3 18"></path></svg><span>Add photo</span></div></div>
+          <div class="meta"><h4>Montrose Armoire</h4><span class="tag">Cabinetry</span></div>
         </div>
         <div class="g-card">
-          <div class="ph-photo has-photo" data-editable="image"><img src="assets/media-06.png" alt=""><div class="ph-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="14" rx="1"></rect><circle cx="9" cy="10" r="1.5"></circle><path d="M21 16l-5.5-5-4 4-2-2L3 18"></path></svg><span>Add photo</span></div></div>
-          <div class="meta"><h4 data-editable="text">Florentine Bath Vanity</h4><span class="tag" data-editable="text">Furniture</span></div>
+          <div class="ph-photo has-photo"><img src="assets/media-06.png" alt=""><div class="ph-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="14" rx="1"></rect><circle cx="9" cy="10" r="1.5"></circle><path d="M21 16l-5.5-5-4 4-2-2L3 18"></path></svg><span>Add photo</span></div></div>
+          <div class="meta"><h4>Florentine Bath Vanity</h4><span class="tag">Furniture</span></div>
         </div>
         <div class="g-card">
-          <div class="ph-photo has-photo" data-editable="image"><video autoplay="" muted="" loop="" playsinline="" src="assets/media-07.mp4"></video><div class="ph-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="14" rx="1"></rect><circle cx="9" cy="10" r="1.5"></circle><path d="M21 16l-5.5-5-4 4-2-2L3 18"></path></svg><span>Add photo</span></div></div>
-          <div class="meta"><h4 data-editable="text">Entry Hall Millwork</h4><span class="tag" data-editable="text">Millwork</span></div>
+          <div class="ph-photo has-photo"><video autoplay="" muted="" loop="" playsinline="" src="assets/media-07.mp4"></video><div class="ph-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="14" rx="1"></rect><circle cx="9" cy="10" r="1.5"></circle><path d="M21 16l-5.5-5-4 4-2-2L3 18"></path></svg><span>Add photo</span></div></div>
+          <div class="meta"><h4>Entry Hall Millwork</h4><span class="tag">Millwork</span></div>
         </div>
       </div>
     </div>
@@ -433,16 +399,16 @@
   <section id="cabinetry" class="section-pad" style="background:var(--panel); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
     <div class="wrap">
       <div class="feature-row">
-        <div class="ph-photo has-photo" data-editable="image"><img src="assets/media-08.png" alt=""><div class="ph-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="14" rx="1"></rect><circle cx="9" cy="10" r="1.5"></circle><path d="M21 16l-5.5-5-4 4-2-2L3 18"></path></svg><span>Add photo</span></div></div>
+        <div class="ph-photo has-photo"><img src="assets/media-08.png" alt=""><div class="ph-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="14" rx="1"></rect><circle cx="9" cy="10" r="1.5"></circle><path d="M21 16l-5.5-5-4 4-2-2L3 18"></path></svg><span>Add photo</span></div></div>
         <div class="copy">
-          <span class="eyebrow" data-editable="text">Custom Cabinetry</span>
-          <h2 data-editable="text">Kitchens and baths, every detail considered</h2>
-          <p data-editable="text">Every cabinet is drawn, engineered, and built for the room it lives in — not pulled from a catalog. From hand-selected hardwoods to hardware and finish, each element is chosen to work together, and every box is scribed to fit its space exactly.</p>
+          <span class="eyebrow">Custom Cabinetry</span>
+          <h2>Kitchens and baths, every detail considered</h2>
+          <p>Every cabinet is drawn, engineered, and built for the room it lives in — not pulled from a catalog. From hand-selected hardwoods to hardware and finish, each element is chosen to work together, and every box is scribed to fit its space exactly.</p>
           <ul class="feature-list">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12l4 4 10-10"></path></svg><span data-editable="text">Premium hardwoods and engineered wood panels</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12l4 4 10-10"></path></svg><span data-editable="text">Personalized designs for your space and style</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12l4 4 10-10"></path></svg><span data-editable="text">Thoughtful storage for everyday living</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12l4 4 10-10"></path></svg><span data-editable="text">Custom finishes and careful installation</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12l4 4 10-10"></path></svg><span>Premium hardwoods and engineered wood panels</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12l4 4 10-10"></path></svg><span>Personalized designs for your space and style</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12l4 4 10-10"></path></svg><span>Thoughtful storage for everyday living</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12l4 4 10-10"></path></svg><span>Custom finishes and careful installation</span></li>
           </ul>
         </div>
       </div>
@@ -452,14 +418,14 @@
   <section id="furniture" class="section-pad">
     <div class="wrap">
       <div class="feature-row reverse">
-        <div class="ph-photo has-photo" data-editable="image"><img src="assets/media-09.png" alt=""><div class="ph-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="14" rx="1"></rect><circle cx="9" cy="10" r="1.5"></circle><path d="M21 16l-5.5-5-4 4-2-2L3 18"></path></svg><span>Add photo</span></div></div>
+        <div class="ph-photo has-photo"><img src="assets/media-09.png" alt=""><div class="ph-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="14" rx="1"></rect><circle cx="9" cy="10" r="1.5"></circle><path d="M21 16l-5.5-5-4 4-2-2L3 18"></path></svg><span>Add photo</span></div></div>
         <div class="copy">
-          <span class="eyebrow" data-editable="text">Handcrafted Furniture</span>
-          <h2 data-editable="text">Furniture built to become an heirloom</h2>
-          <p data-editable="text">Every commission starts with the room, the client, and how a piece will actually be used — then it's designed and fabricated by hand, joint by joint. It's the same discipline behind hundreds of pieces built over more than 26 years, brought to a table, a bed frame, or a single credenza.</p>
+          <span class="eyebrow">Handcrafted Furniture</span>
+          <h2>Furniture built to become an heirloom</h2>
+          <p>Every commission starts with the room, the client, and how a piece will actually be used — then it's designed and fabricated by hand, joint by joint. It's the same discipline behind hundreds of pieces built over more than 26 years, brought to a table, a bed frame, or a single credenza.</p>
           <div class="stat-row" style="grid-template-columns:repeat(2,1fr); margin-top:8px;">
-            <div class="stat"><div class="n" data-editable="text">300+</div><div class="l" data-editable="text">Pieces fabricated by hand</div></div>
-            <div class="stat"><div class="n" data-editable="text">26+</div><div class="l" data-editable="text">Years of craft</div></div>
+            <div class="stat"><div class="n">300+</div><div class="l">Pieces fabricated by hand</div></div>
+            <div class="stat"><div class="n">26+</div><div class="l">Years of craft</div></div>
           </div>
         </div>
       </div>
@@ -469,15 +435,15 @@
   <section id="millwork" class="section-pad" style="background:var(--panel); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
     <div class="wrap">
       <div class="feature-row">
-        <div class="ph-photo has-photo" data-editable="image"><video autoplay="" muted="" loop="" playsinline="" src="assets/media-10.mp4"></video><div class="ph-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="14" rx="1"></rect><circle cx="9" cy="10" r="1.5"></circle><path d="M21 16l-5.5-5-4 4-2-2L3 18"></path></svg><span>Add photo</span></div></div>
+        <div class="ph-photo has-photo"><video autoplay="" muted="" loop="" playsinline="" src="assets/media-10.mp4"></video><div class="ph-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="14" rx="1"></rect><circle cx="9" cy="10" r="1.5"></circle><path d="M21 16l-5.5-5-4 4-2-2L3 18"></path></svg><span>Add photo</span></div></div>
         <div class="copy">
-          <span class="eyebrow" data-editable="text">Architectural Millwork</span>
-          <h2 data-editable="text">Architecture, finished in detail</h2>
-          <p data-editable="text">We create fitted cabinetry and architectural millwork for the special spaces in your home—from inviting window seats and custom libraries to thoughtfully designed ceilings. Each detail is designed to complement your home and crafted with the care of fine furniture.</p>
+          <span class="eyebrow">Architectural Millwork</span>
+          <h2>Architecture, finished in detail</h2>
+          <p>We create fitted cabinetry and architectural millwork for the special spaces in your home—from inviting window seats and custom libraries to thoughtfully designed ceilings. Each detail is designed to complement your home and crafted with the care of fine furniture.</p>
           <ul class="feature-list">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12l4 4 10-10"></path></svg><span data-editable="text">Window seats, libraries, and fitted cabinetry</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12l4 4 10-10"></path></svg><span data-editable="text">Custom trim, paneling, and ceiling details</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12l4 4 10-10"></path></svg><span data-editable="text">On-site templating and installation</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12l4 4 10-10"></path></svg><span>Window seats, libraries, and fitted cabinetry</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12l4 4 10-10"></path></svg><span>Custom trim, paneling, and ceiling details</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12l4 4 10-10"></path></svg><span>On-site templating and installation</span></li>
           </ul>
         </div>
       </div>
@@ -487,14 +453,14 @@
   <section id="about" class="section-pad">
     <div class="wrap">
       <div class="about-grid">
-        <div class="ph-photo has-photo" data-editable="image"><img src="assets/media-11.jpg" alt=""><div class="ph-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="8" r="3.2"></circle><path d="M5 20c1.2-4 4-6 7-6s5.8 2 7 6"></path></svg><span>Add photo</span></div></div>
+        <div class="ph-photo has-photo"><img src="assets/media-11.jpg" alt=""><div class="ph-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="8" r="3.2"></circle><path d="M5 20c1.2-4 4-6 7-6s5.8 2 7 6"></path></svg><span>Add photo</span></div></div>
         <div class="copy">
-          <span class="eyebrow" data-editable="text">About</span>
-          <h2 data-editable="text" style="margin-bottom:18px; display:block;">A designer’s eye. A craftsman’s hands.</h2>
-          <p data-editable="text">RJW Studios is the independent design and woodworking studio of Robert Williams. With more than 26 years of experience, Robert creates custom furniture, cabinetry, and architectural millwork guided by thoughtful proportions, beautiful materials, and lasting craftsmanship.</p>
-          <p data-editable="text">His career includes serving as Vice President of Design and Merchandising at Habersham and Senior Director of Design at Ballard Designs. At Habersham, he designed licensed furniture collections for Biltmore Estate, Hearst Castle, and The Plaza Hotel, along with a Monet collection licensed through the Versailles Foundation.</p>
-          <p data-editable="text">Travels through museums, historic homes, and grand estates around the world have shaped his appreciation for architecture and decorative detail. These influences inform his work, interpreted for the way people live today.</p>
-          <p data-editable="text">At RJW Studios, Robert works directly with clients to create distinctive furniture, fitted cabinetry, and millwork that bring character and purpose to their homes.</p>
+          <span class="eyebrow">About</span>
+          <h2 style="margin-bottom:18px; display:block;">A designer’s eye. A craftsman’s hands.</h2>
+          <p>RJW Studios is the independent design and woodworking studio of Robert Williams. With more than 26 years of experience, Robert creates custom furniture, cabinetry, and architectural millwork guided by thoughtful proportions, beautiful materials, and lasting craftsmanship.</p>
+          <p>His career includes serving as Vice President of Design and Merchandising at Habersham and Senior Director of Design at Ballard Designs. At Habersham, he designed licensed furniture collections for Biltmore Estate, Hearst Castle, and The Plaza Hotel, along with a Monet collection licensed through the Versailles Foundation.</p>
+          <p>Travels through museums, historic homes, and grand estates around the world have shaped his appreciation for architecture and decorative detail. These influences inform his work, interpreted for the way people live today.</p>
+          <p>At RJW Studios, Robert works directly with clients to create distinctive furniture, fitted cabinetry, and millwork that bring character and purpose to their homes.</p>
         </div>
       </div>
     </div>
@@ -504,13 +470,13 @@
     <div class="wrap">
       <div class="contact-grid">
         <div class="contact-info">
-          <span class="eyebrow" data-editable="text">Start a Project</span>
-          <h2 data-editable="text" style="margin-top:16px;">Let's design something built to last</h2>
-          <p style="margin-top:16px; color:var(--ink-soft); font-size:14.5px; line-height:1.8;" data-editable="text">Tell us about your kitchen, furniture, or millwork project and we'll follow up to talk through scope, timeline, and next steps.</p>
+          <span class="eyebrow">Start a Project</span>
+          <h2 style="margin-top:16px;">Let's design something built to last</h2>
+          <p style="margin-top:16px; color:var(--ink-soft); font-size:14.5px; line-height:1.8;">Tell us about your kitchen, furniture, or millwork project and we'll follow up to talk through scope, timeline, and next steps.</p>
           <dl>
-            <div><dt data-editable="text">Email</dt><dd data-editable="text">hello@rjwstudios.com</dd></div>
-            <div><dt data-editable="text">Phone</dt><dd data-editable="text">(555) 010‑0142</dd></div>
-            <div><dt data-editable="text">Studio</dt><dd data-editable="text">By appointment</dd></div>
+            <div><dt>Email</dt><dd>hello@rjwstudios.com</dd></div>
+            <div><dt>Phone</dt><dd>(555) 010‑0142</dd></div>
+            <div><dt>Studio</dt><dd>By appointment</dd></div>
           </dl>
         </div>
         <form class="contact-form" id="rjw-contact-form">
@@ -548,23 +514,14 @@
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
-    <span class="copyright" data-editable="text">© 2026 RJW Studios. All rights reserved.</span>
+    <span class="copyright">© 2026 RJW Studios. All rights reserved.</span>
   </div>
 </footer>
 
-<div id="rjw-toolbar" role="toolbar" aria-label="Site editor" hidden="">
-  <b>Editing mode</b>
-  <span style="opacity:.7;">Click text or photos to edit</span>
-  <button class="rjw-btn" id="rjw-exit" type="button">Exit (Esc)</button>
-  <button class="rjw-btn primary" id="rjw-save" type="button">Save changes</button>
-</div>
-<div id="rjw-toast" role="status" class="show">Downloaded rjw-studios.html — replace your saved file with this one to keep the edit.</div>
+<div id="rjw-toast" role="status"></div>
 
 <script>
 (function(){
-  var editing = false;
-
-  var toolbar = document.getElementById('rjw-toolbar');
   var toastEl = document.getElementById('rjw-toast');
 
   var siteHeader = document.querySelector('header.site');
@@ -581,88 +538,6 @@
     clearTimeout(toastEl._t);
     toastEl._t = setTimeout(function(){ toastEl.classList.remove('show'); }, 4200);
   }
-
-  function setEditing(on){
-    editing = on;
-    document.body.classList.toggle('rjw-editing', on);
-    var texts = document.querySelectorAll('[data-editable="text"]');
-    for (var i=0;i<texts.length;i++){
-      if (on) texts[i].setAttribute('contenteditable','true');
-      else texts[i].removeAttribute('contenteditable');
-    }
-    toolbar.hidden = !on;
-  }
-
-  document.addEventListener('keydown', function(e){
-    var tag = (e.target && e.target.tagName || '').toLowerCase();
-    var typing = tag === 'input' || tag === 'textarea' || (e.target && e.target.isContentEditable);
-    if (e.key === 'E' && e.shiftKey && !typing){
-      setEditing(!editing);
-    } else if (e.key === 'Escape' && editing){
-      setEditing(false);
-    }
-  });
-
-  document.querySelectorAll('[data-editable="image"]').forEach(function(el){
-    el.addEventListener('click', function(e){
-      if (!editing) return;
-      e.preventDefault();
-      var input = document.createElement('input');
-      input.type = 'file';
-      input.accept = 'image/*,video/*';
-      input.onchange = function(){
-        var file = input.files && input.files[0];
-        if (!file) return;
-        if (file.size > 8 * 1024 * 1024){
-          toast('Please use a file under 8MB', false);
-          return;
-        }
-        var reader = new FileReader();
-        reader.onload = function(){
-          el.classList.add('has-photo');
-          var existingMedia = el.querySelector('img,video');
-          if (existingMedia) existingMedia.remove();
-          var media;
-          if (file.type.indexOf('video/') === 0){
-            media = document.createElement('video');
-            media.autoplay = true; media.muted = true; media.defaultMuted = true; media.loop = true; media.playsInline = true;
-            media.src = reader.result;
-          } else {
-            media = document.createElement('img');
-            media.src = reader.result;
-            media.alt = '';
-          }
-          el.insertBefore(media, el.firstChild);
-        };
-        reader.readAsDataURL(file);
-      };
-      input.click();
-    });
-  });
-
-  document.getElementById('rjw-exit').addEventListener('click', function(){ setEditing(false); });
-
-  // Standalone-file save: since this copy runs as a plain local file (not the
-  // hosted Claude artifact), "Save changes" downloads an updated HTML file
-  // with your edits baked in. Replace your saved file with the new download.
-  document.getElementById('rjw-save').addEventListener('click', function(){
-    setEditing(false);
-    try{
-      var html = '<!doctype html>\n' + document.documentElement.outerHTML;
-      var blob = new Blob([html], { type: 'text/html' });
-      var url = URL.createObjectURL(blob);
-      var a = document.createElement('a');
-      a.href = url;
-      a.download = 'rjw-studios.html';
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      setTimeout(function(){ URL.revokeObjectURL(url); }, 4000);
-      toast('Downloaded rjw-studios.html — replace your saved file with this one to keep the edit.');
-    }catch(err){
-      toast('Could not save automatically — try your browser\'s Save Page As instead.', false);
-    }
-  });
 
   document.getElementById('rjw-menu-toggle').addEventListener('click', function(){
     document.getElementById('rjw-nav').classList.toggle('open');
